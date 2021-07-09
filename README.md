@@ -58,7 +58,7 @@ food_delivery_db
 
 ##### Collections
 
-- ```javascript
+- ```sh
   users  #for user specific data (email and username are unique indexes)
   ```
 
