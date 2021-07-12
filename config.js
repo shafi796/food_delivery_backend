@@ -6,9 +6,12 @@ module.exports = {
     database: "food_delivery_db",
     collections: {
       USERS: "users",
+      CARTS: "carts",
+      FOODS: "foods",
     },
   },
   server: {
-    port: config.appPort,
+    port: config.serverPort,
+    ip: config.serverIp,
   },
 };

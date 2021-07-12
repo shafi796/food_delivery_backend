@@ -38,13 +38,14 @@ npm install
   }
 ```
 
-- Application Port Number (Default 3000)
+- Application IP Address and Port Number (Default 3000)
 
 ```json
-# open package.json and add port inside [projectConfig.appPort]
+# open package.json and add ip and port inside [projectConfig]
 
 "projectConfig": {
-    "appPort": "<put the app port here (integer)>"
+	"serverIp": "<put the server ip address here (string)>",
+    "serverPort": "<put the server port number here (integer)>"
   }
 ```
 
@@ -74,3 +75,42 @@ food_delivery_db
   "password": "String"
 }
 ```
+
+- ```sh
+  carts #for carts details
+  ```
+
+###### collection structure
+
+```json
+{
+    "_id": {
+        "$oid": "Default ObjectID"
+    },
+    "foodId": "String (food reference id)",
+    "count": "Integer (count of food item added)"
+}
+```
+
+- ```sh
+	foods #for food details
+  ```
+
+###### collection structure
+
+```json
+{
+    "_id": {
+        "$oid": "Default ObjectID"
+    },
+    "id": "String (unique)",
+    "restaurantId": "String (restaurant reference id)",
+    "name": "String (name of the food)",
+    "price": "Float (price of the food)",
+    "image": "String (id of image stored in system)",
+    "category": "String (category of food, unique for a restaurant)",
+    "description": "String (description of food)",
+    "ingredients": "String (ingrediants of food)"
+}
+```
+

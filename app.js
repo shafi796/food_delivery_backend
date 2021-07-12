@@ -20,9 +20,11 @@ MongoDB.connectToMongo().then(async (db) => {
 });
 
 app.use("/", require("./src/routes/authentication.route"));
+app.use("/cart", require("./src/routes/cart.route"));
+app.use("/food", require("./src/routes/food.route"));
 
-app.listen(config.server.port, () => {
+app.listen(config.server.port, config.server.ip, () => {
   console.log(
-    `Food Delivery app listening at http://localhost:${config.server.port}`
+    `Food Delivery app listening at http://${config.server.ip}:${config.server.port}`
   );
 });

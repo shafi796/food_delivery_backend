@@ -20,6 +20,7 @@
   },
   "projectConfig": {
     "mongoConnectionUrl": "<put the mongodb connection string here>",
-    "appPort": 3000
+    "serverPort": 3000,
+    "serverIp": "<put your backend running system ip address here>"
   }
 }
